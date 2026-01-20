@@ -77,7 +77,7 @@ export default function BlogApp(){
               <div key={post.id}>
                 <h3>{post.title}</h3>
                 <p>{post.date}</p>
-                <p>{post.content.substring(0,100)}...</p>
+                <ReactMarkdown>{post.content.slice(0,100) + "..."}</ReactMarkdown>
                 <button onClick={() => handleDeletePost(post.id)}>删除</button>
               </div>
             ))}
