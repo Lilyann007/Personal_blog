@@ -31,9 +31,10 @@
 ## 3.交互反馈机制
 为了提升用户体验并防止误操作，项目内置了关键节点的交互反馈：
 * **发布成功提示**：文章成功同步至本地存储后，弹出即时反馈，告知用户操作已完成。
-![发布提醒] (./screenshots/screenshot4.jpg.png)
+![发布提醒](./screenshots/screenshot4.jpg)
+
 * **安全删除确认**：执行删除操作前触发二次确认弹窗，有效规避因误触导致的数据丢失。
-![删除确认] (./screenshots/screenshot5.png)
+![删除确认](./screenshots/screenshot5.jpg)
 
 
 ## 🚀 本地运行
