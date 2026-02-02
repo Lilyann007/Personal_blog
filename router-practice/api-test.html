@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>API测试</title>
+</head>
+<body>
+    <h1>API 调用调试</h1>
+    <button id="fetchBtn">获取数据</button>
+    <div id="result"></div>
+
+    <script>
+        const button = document.getElementById("fetchBtn");
+        const resultDiv = document.getElementById("result");
+
+        button.addEventListener("click", () => {
+            resultDiv.textContent = "加载中…";
+
+            //调用API
+            fetch("https://jsonplaceholder.typicode.com/users/1")
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    resultDiv.textContent = `用户名：${data.name}，邮箱：${data.email}`;
+                })
+                .catch(error => {
+                    resultDiv.textContent = "出错了：" + error.message;
+                })
+        })
+    </script>
+</body>
+</html>
